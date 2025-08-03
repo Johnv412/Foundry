@@ -1,0 +1,15 @@
+{
+  "projectName": "Test2",
+  "projectType": "SaaS_Launch_Playbook",
+  "leadStrategist": "Dashboard User",
+  "leadArchitect": "Foundry OS",
+  "status": "planning",
+  "description": "Project created via dashboard on 2025-08-03",
+  "metrics": {
+    "startDate": "2025-08-03"
+  },
+  "tasks": {
+    "active": [],
+    "completed": []
+  }
+}
