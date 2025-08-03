@@ -1,0 +1,73 @@
+# Foundry OS Configuration
+version: "1.0.0"
+hub_directory: "~/ai-empire-hub"
+
+# Agent Registry
+agents:
+  architect_specialist:
+    name: "Architect Specialist"
+    module: "agents.architect"
+    description: "Designs system architecture and project structures"
+    
+  app_factory_specialist:
+    name: "App Factory Specialist"
+    module: "agents.app_factory"
+    description: "Rapid application development and prototyping"
+    
+  api_integration_master:
+    name: "API Integration Master"
+    module: "agents.api_master"
+    description: "Third-party API integration specialist"
+    
+  devops_specialist:
+    name: "DevOps Specialist"
+    module: "agents.devops"
+    description: "Deployment and infrastructure management"
+    
+  data_intelligence_agent:
+    name: "Data Intelligence Agent"
+    module: "agents.data_intel"
+    description: "Market research and data analysis"
+    
+  qa_specialist:
+    name: "QA Specialist"
+    module: "agents.qa"
+    description: "Quality assurance and testing"
+
+# Team Templates
+templates:
+  restaurant_bot:
+    name: "Restaurant Bot Team"
+    agents:
+      - api_integration_master
+      - app_factory_specialist
+      - qa_specialist
+    default_stack: "python-fastapi"
+    
+  saas_launch:
+    name: "SaaS Launch Team"
+    agents:
+      - architect_specialist
+      - app_factory_specialist
+      - devops_specialist
+      - data_intelligence_agent
+    default_stack: "react-node"
+    
+  marketplace:
+    name: "Marketplace Team"
+    agents:
+      - architect_specialist
+      - api_integration_master
+      - app_factory_specialist
+      - devops_specialist
+    default_stack: "nextjs-postgres"
+
+# Learning System
+learning:
+  metrics_threshold: 0.25  # 25% improvement triggers pattern detection
+  auto_save_patterns: false  # Require user confirmation
+  metrics_tracked:
+    - completion_time
+    - error_rate
+    - deployment_success
+    - code_quality_score

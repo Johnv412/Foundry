@@ -1,0 +1,38 @@
+{
+  "projectName": "AI Pizza Pro",
+  "projectType": "restaurant_bot",
+  "leadStrategist": "Claude",
+  "leadArchitect": "PromptDEV",
+  "coreRepo": "https://github.com/Johnv412/AIPizzaPro",
+  "liveUrl": "https://aipizzapro.com",
+  "status": "development",
+  "description": "AI-powered restaurant ordering and management system",
+  "technologies": ["Python", "FastAPI", "Square API", "Twilio"],
+  "phase": "MVP Development",
+  "team": ["api_integration_master", "app_factory_specialist", "qa_specialist"],
+  "metrics": {
+    "startDate": "2024-02-01",
+    "estimatedLaunch": "2024-04-01",
+    "targetRevenue": "$25,000",
+    "targetUsers": 100
+  },
+  "tasks": {
+    "active": [
+      {
+        "id": "task_pizza_001",
+        "description": "Build Square API integration for orders",
+        "assignedTo": "api_integration_master",
+        "priority": "high",
+        "dueDate": "2024-02-20"
+      },
+      {
+        "id": "task_pizza_002",
+        "description": "Create voice ordering system",
+        "assignedTo": "app_factory_specialist",
+        "priority": "medium",
+        "dueDate": "2024-02-25"
+      }
+    ],
+    "completed": []
+  }
+}

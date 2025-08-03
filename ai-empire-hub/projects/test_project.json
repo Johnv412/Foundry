@@ -1,0 +1,27 @@
+{
+  "projectName": "Test Project",
+  "projectType": "custom",
+  "leadStrategist": "Claude",
+  "leadArchitect": "You",
+  "status": "planning",
+  "description": "A simple test project to verify the PLUG-AND-PLAY system",
+  "phase": "Testing Phase",
+  "team": ["architect_specialist"],
+  "metrics": {
+    "startDate": "2024-02-03",
+    "targetRevenue": "$5,000",
+    "targetUsers": 100
+  },
+  "tasks": {
+    "active": [
+      {
+        "id": "test_001",
+        "description": "Verify Foundry OS functionality",
+        "assignedTo": "architect_specialist",
+        "priority": "high",
+        "dueDate": "2024-02-10"
+      }
+    ],
+    "completed": []
+  }
+}

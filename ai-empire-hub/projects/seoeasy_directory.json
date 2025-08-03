@@ -1,0 +1,46 @@
+{
+  "projectName": "SEOEasy Directory",
+  "projectType": "marketplace",
+  "leadStrategist": "Claude",
+  "leadArchitect": "Claude",
+  "coreRepo": "https://github.com/Johnv412/seoeasyWP",
+  "liveUrl": "https://seoeasy.net",
+  "status": "production",
+  "description": "AI & SEO tools directory and marketplace platform",
+  "technologies": ["WordPress", "GeoDirectory", "PHP", "MySQL"],
+  "phase": "Growth & Optimization",
+  "team": ["architect_specialist", "app_factory_specialist", "devops_specialist"],
+  "metrics": {
+    "startDate": "2024-01-01",
+    "launchDate": "2024-02-01",
+    "revenue": "$8,500",
+    "users": 1200,
+    "toolsListed": 150
+  },
+  "tasks": {
+    "active": [
+      {
+        "id": "task_seo_001",
+        "description": "Implement affiliate tracking system",
+        "assignedTo": "api_integration_master",
+        "priority": "high",
+        "dueDate": "2024-02-20"
+      },
+      {
+        "id": "task_seo_002",
+        "description": "Add automated content pipeline",
+        "assignedTo": "data_intelligence_agent",
+        "priority": "medium",
+        "dueDate": "2024-03-01"
+      }
+    ],
+    "completed": [
+      {
+        "id": "task_seo_000",
+        "description": "Design and implement new homepage",
+        "completedBy": "architect_specialist",
+        "completedDate": "2024-02-03"
+      }
+    ]
+  }
+}

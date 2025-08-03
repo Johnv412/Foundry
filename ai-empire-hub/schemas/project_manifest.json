@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Foundry OS Project Manifest",
+  "description": "Schema for Foundry OS project manifest files",
+  "type": "object",
+  "required": [
+    "projectName",
+    "projectType",
+    "leadStrategist",
+    "leadArchitect",
+    "status"
+  ],
+  "properties": {
+    "projectName": {
+      "type": "string",
+      "description": "Unique project name",
+      "minLength": 1
+    },
+    "projectType": {
+      "type": "string",
+      "description": "Project template type",
+      "enum": [
+        "SaaS_Launch_Playbook",
+        "restaurant_bot",
+        "marketplace",
+        "ecommerce_platform",
+        "ai_agent_builder",
+        "custom"
+      ]
+    },
+    "leadStrategist": {
+      "type": "string",
+      "description": "Primary strategic lead (AI or human)"
+    },
+    "leadArchitect": {
+      "type": "string",
+      "description": "Primary technical architect"
+    },
+    "coreRepo": {
+      "type": "string",
+      "format": "uri",
+      "description": "Main repository URL"
+    },
+    "liveUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Live production URL"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planning", "development", "testing", "production", "maintenance", "archived"],
+      "description": "Current project status"
+    },
+    "description": {
+      "type": "string",
+      "description": "Project description"
+    },
+    "technologies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Technologies used in the project"
+    },
+    "phase": {
+      "type": "string",
+      "description": "Current development phase"
+    },
+    "team": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Assigned agent team members"
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "launchDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "estimatedLaunch": {
+          "type": "string",
+          "format": "date"
+        },
+        "revenue": {
+          "type": "string"
+        },
+        "targetRevenue": {
+          "type": "string"
+        },
+        "users": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "targetUsers": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "tasks": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "description", "assignedTo", "priority"],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "assignedTo": {
+                "type": "string"
+              },
+              "priority": {
+                "type": "string",
+                "enum": ["low", "medium", "high", "critical"]
+              },
+              "dueDate": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        },
+        "completed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "description", "completedBy", "completedDate"],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "completedBy": {
+                "type": "string"
+              },
+              "completedDate": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
