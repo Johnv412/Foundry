@@ -69,7 +69,7 @@ def show_empire_status():
             'production': '🚀', 'maintenance': '🔧', 'archived': '📦'
         }.get(project.get('status'), '❓')
         
-        print(f"{status_emoji} {project['projectName']}")
+        print(f"{status_emoji} {project.get('projectName', project.get('name', 'Unknown Project'))}")
         print(f"   Type: {project.get('projectType', 'Unknown')}")
         print(f"   Status: {project.get('status', 'Unknown')}")
         print(f"   Lead: {project.get('leadStrategist', 'Unknown')}")

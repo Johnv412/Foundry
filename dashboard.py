@@ -44,6 +44,7 @@ except ImportError:
                         projects.append(json.load(f))
                 except:
                     pass
+                    pass
             return projects
 
 # Page configuration
@@ -281,6 +282,23 @@ def render_sidebar():
                 st.rerun()
             except Exception as e:
                 st.error(f"Error: {str(e)}")
+        
+        st.divider()
+        
+        # Simple Action Buttons
+        st.subheader("🚀 Quick Actions")
+        
+        if st.button("🚀 Deploy HugemouthSEO", use_container_width=True, type="primary"):
+            st.success("🚀 Deploying HugemouthSEO...")
+            st.balloons()
+        
+        if st.button("📝 Generate Content", use_container_width=True):
+            st.success("📝 Generating content...")
+            st.balloons()
+        
+        if st.button("📊 Generate Report", use_container_width=True):
+            st.success("📊 Creating empire report...")
+            st.balloons()
 
 def render_main_dashboard():
     """Render the main dashboard content"""
